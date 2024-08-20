@@ -1,6 +1,7 @@
 import * as THREE from "three";
-import OrbitControls from "three-orbitcontrols";
+
 import { INITIAL_CAMERA_POSITION } from "./constants";
+import OrbitControls from "three-orbitcontrols";
 
 export const scene = new THREE.Scene();
 export const rootMesh = new THREE.Mesh(new THREE.Geometry());

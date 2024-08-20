@@ -1,7 +1,7 @@
+import { CURVE_SEGMENTS } from "./constants";
+import Path from "./paths";
 import { init as initScene } from "./scene";
 import { init as initSphere } from "./planet";
-import Path from "./paths";
-import { CURVE_SEGMENTS } from "./constants";
 import moment from "moment";
 
 export default function initGlobe(container) {
@@ -41,12 +41,7 @@ export default function initGlobe(container) {
 				const epochStart = moment(dateStart).unix();
 				const epochEnd = moment(dateEnd).unix();
 
-				return filteredData.filter((attack) => {
-					return (
-						parseInt(attack.timestamp) >= epochStart &&
-						parseInt(attack.timestamp) <= epochEnd
-					);
-				});
+				return filteredData;
 			}
 
 			function filterAndUpdateTotals() {
